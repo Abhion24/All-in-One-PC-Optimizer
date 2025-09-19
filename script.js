@@ -6,6 +6,7 @@ const heroButtons = document.querySelectorAll('.hero-buttons .btn');
 const featureCards = document.querySelectorAll('.feature-card');
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 const pricingCards = document.querySelectorAll('.pricing-card');
+const contactSalesBtn = document.getElementById('contactSalesBtn');
 
 // Mobile Menu Toggle
 mobileMenuBtn.addEventListener('click', () => {
@@ -52,6 +53,26 @@ heroButtons.forEach(button => {
             });
         }
     });
+});
+
+// Under Development Message for Buy Now Button
+document.addEventListener('DOMContentLoaded', function() {
+    const buyNowButtons = document.querySelectorAll('a[href="https://github.com/Abhion24/All-in-One-PC-Optimizer/archive/refs/tags/v1.0.zip"]');
+    
+    buyNowButtons.forEach(button => {
+        if (button.textContent.includes('Buy Now')) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This feature is under development. Please download the free version for now.');
+            });
+        }
+    });
+});
+
+// Under Development Message for Contact Sales Button
+contactSalesBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('This feature is under development. Please download the free version for now.');
 });
 
 // Animation on Scroll
